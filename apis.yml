@@ -1,23 +1,66 @@
 aid: blue-ocean-barns
+
 name: Blue Ocean Barns
-description: 'Blue Ocean Barns is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Blue Ocean Barns develops Brominata®, a patented seaweed-based feed supplement that dramatically reduces methane emissions from cattle, improving energy conversion and profitability for farmers. By leveraging Asparagopsis taxiformis, the product can cut enteric methane by up to 80%, contributing to climate-smart agriculture and offering a sustainable solution for the livestock industry.'
+
 url: https://raw.githubusercontent.com/api-evangelist/blue-ocean-barns/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-29'
+
 modified: '2026-09-29'
+
 tags:
 - Company
-apis: []
+- Agriculture
+- ClimateTech
+- Livestock
+- Sustainability
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/blue-ocean-barns-llms.txt
+- type: MCPServer
+  url: mcp/blue-ocean-barns-mcp.yml
+- type: Hosts
+  url: hosts/blue-ocean-barns-hosts.yml
+- type: Vendors
+  url: vendors/blue-ocean-barns-vendors.yml
+- type: Leadership
+  url: https://www.blueoceanbarns.com/team
+- type: DomainSecurity
+  url: security/blue-ocean-barns-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.blueoceanbarns.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website does not expose any machine‑readable API specification.
+  evidence:
+    - url: https://www.blueoceanbarns.com
+      status: 200
+  checked: '2026-09-29'
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
